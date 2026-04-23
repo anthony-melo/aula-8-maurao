@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int potencia(int base, int expoente) {
+    if (expoente == 0) {
+        return 1;
+    } 
+    else {
+        return base * potencia(base, expoente - 1);
+    }
+}
+
+int main() {
+    int b, c;
+    printf("digite o primeiro numero: ");
+    scanf("%d", &b);
+    
+    printf("digite o segundo numero: ");
+    scanf("%d", &c);
+    
+    int resultado = potencia(b, c);
+    
+    printf("%d elevado a %d é: %d\n", b, c, resultado);
+    
+    return 0;
+}
